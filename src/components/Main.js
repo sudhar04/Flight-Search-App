@@ -33,7 +33,7 @@ const getApiData = async () => {
     setLoading(true);
     setLoadingImage(animationLooking);
     try{
-        const response = await axios.get(` https://flight-api-3zx8.onrender.com/api/flights?from=${UserData.from}&to=${UserData.to}&date=${UserData.date}&cabin_class=${UserData.cabin_class}&airline=${UserData.airline}&min_price=${UserData.min_price}`); 
+        const response = await axios.get(`https://flight-api-3zx8.onrender.com/api/flights?from=${UserData.from}&to=${UserData.to}&date=${UserData.date}&cabin_class=${UserData.cabin_class}&airline=${UserData.airline}&min_price=${UserData.min_price}`); 
         if (response.data.length > 0) {
         setFlights(response.data);
         setSingleData(response.data[0]);
@@ -109,7 +109,7 @@ const getApiDataChatbot = async () => {
     setLoading(true);
     setLoadingImage(animationLooking);
     try{
-        const response = await axios.get(` https://flight-api-3zx8.onrender.com/api/flights?from=${data.from}&to=${data.to}&date=${data.date}&cabin_class=${data.cabin_class}&airline=${data.airline}&min_price=${data.min_price}`); 
+        const response = await axios.get(`https://flight-api-3zx8.onrender.com/api/flights?from=${data.from}&to=${data.to}&date=${data.date}&cabin_class=${data.cabin_class}&airline=${data.airline}&min_price=${data.min_price}`); 
         if (response.data.length > 0) {
         setFlights(response.data);
         setSingleData(response.data[0]);
